@@ -71,17 +71,19 @@ public class Main {
         }
 
         System.out.println("Задача №6");
-        int passengers = 104;
+        int passengers = 105;
         int carCapacity = 102;
         int seating = 60;
         if (passengers <= 60) {
             System.out.println("В вагоне есть " + (seating - passengers) +
-                    "  сидячих мест и " + (carCapacity -seating) + " стоячих.");
+                    " сидячих мест и " + (carCapacity - seating) + " стоячих.");
         } else {
-            System.out.println("Сидячих мест 0. Стоячих мест  " + (carCapacity - passengers));
+            System.out.println("Сидячих мест 0. Стоячих мест  " +
+                    (carCapacity - passengers));
         }
-        if (passengers  > 102) {
-            System.out.println("Вагон переполнен.");
+        if (passengers > 102) {
+            System.out.println("Вагон переполнен на " +
+                    -(carCapacity - passengers) + " человека.");
         }
     }
 }
