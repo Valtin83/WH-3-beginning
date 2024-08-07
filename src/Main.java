@@ -69,21 +69,36 @@ public class Main {
             System.out.println("Если возраст ребенка равен " + ageChild +
                     ", то можо кататься без сопровождения взрослого");
         }
-
         System.out.println("Задача №6");
-        int passengers = 105;
+        int passengers = 106;
         int carCapacity = 102;
         int seating = 60;
+        int standingPlaces = carCapacity - seating;
         if (passengers <= 60) {
-            System.out.println("В вагоне есть " + (seating - passengers) +
-                    " сидячих мест и " + (carCapacity - seating) + " стоячих.");
-        } else {
-            System.out.println("Сидячих мест 0. Стоячих мест  " +
-                    (carCapacity - passengers));
+            System.out.println("В вагоне " + (seating - passengers) +
+                    " сидячих мест и " + standingPlaces + " стоячих.");
+        }else {
+            if (passengers > 60 && passengers <= 102) {
+                System.out.println("Сидячих 0 мест, стоячих " + (carCapacity - passengers) +
+                        " мест.");
+        }else {
+                if (passengers > 102) {
+                    System.out.println("Вагон переполнен на " +
+                            -(carCapacity - passengers) + " человека.");
+                }
+            }
         }
-        if (passengers > 102) {
-            System.out.println("Вагон переполнен на " +
-                    -(carCapacity - passengers) + " человека.");
+
+        System.out.println("Задача №7");
+        int one = 1;
+        int two = 2;
+        int three = 3;
+        if (one > two && one > three) {
+            System.out.println("one >");
+        }else if (two > three && two > one) {
+            System.out.println("two >");
+        }else if (three > two && three > one) {
+            System.out.println("three >");
         }
     }
 }
