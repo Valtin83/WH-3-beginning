@@ -7,10 +7,11 @@ public class Main {
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age +
                     " , то он совершеннолетний.");
-        }
-        if (age < 18) {
-            System.out.println("Если возраст человека равен " + age +
-                    " , то он не достиг совершеннолетия, нужно немного подождать.");
+        } else {
+            if (age < 18) {
+                System.out.println("Если возраст человека равен " + age +
+                        " , то он не достиг совершеннолетия, нужно немного подождать.");
+            }
         }
 
         System.out.println("Задача №2");
@@ -34,22 +35,24 @@ public class Main {
                     " км/ч, то можно ездить спокойно.");
         }
 
-        System.out.println(" Задаа №4");
+        System.out.println("Задача №4");
         int ageOfStay = 15;
         if (ageOfStay >= 2 && ageOfStay <= 6) {
             System.out.println("Если возраст человека равен " + ageOfStay +
                     " , то ему нужно ходить в детский сад.");
-        }
-        if (ageOfStay >= 7 && ageOfStay <= 17) {
-            System.out.println("Если возраст человека равен " + ageOfStay +
-                    ", то ему нужно ходить в школу.");
+        } else {
+            if (ageOfStay >= 7 && ageOfStay <= 17) {
+                System.out.println("Если возраст человека равен " + ageOfStay +
+                        ", то ему нужно ходить в школу.");
+            }
         }
         if (ageOfStay >= 18 && ageOfStay <= 24) {
             System.out.println("Если возраст человека равен " + ageOfStay +
                     ",его место в университете.");
-        }
-        if (ageOfStay > 24) {
-            System.out.println("Время ходить на работу.");
+        } else {
+            if (ageOfStay > 24) {
+                System.out.println("Время ходить на работу.");
+            }
         }
 
         System.out.println("Задача №5");
@@ -77,11 +80,11 @@ public class Main {
         if (passengers <= 60) {
             System.out.println("В вагоне " + (seating - passengers) +
                     " сидячих мест и " + standingPlaces + " стоячих.");
-        }else {
+        } else {
             if (passengers > 60 && passengers <= 102) {
                 System.out.println("Сидячих 0 мест, стоячих " + (carCapacity - passengers) +
                         " мест.");
-        }else {
+            } else {
                 if (passengers > 102) {
                     System.out.println("Вагон переполнен на " +
                             -(carCapacity - passengers) + " человека.");
@@ -95,9 +98,9 @@ public class Main {
         int three = 3;
         if (one > two && one > three) {
             System.out.println("one >");
-        }else if (two > three && two > one) {
+        } else if (two > three && two > one) {
             System.out.println("two >");
-        }else if (three > two && three > one) {
+        } else if (three > two && three > one) {
             System.out.println("three >");
         }
     }
