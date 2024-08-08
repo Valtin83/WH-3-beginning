@@ -22,6 +22,16 @@ public class Main {
         }
 
         System.out.println(" Задача №3");
+        int year = 2020;
+        boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+        if (isLeapYear) {
+            System.out.println(year + " год является высокосным.");
+        } else {
+            System.out.println(year + " год не является высокосным.");
+        }
+
+        System.out.println("Задача №4");
+        int deliveryDistance = 95;
 
     }
 }
