@@ -25,13 +25,56 @@ public class Main {
         int year = 2020;
         boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
         if (isLeapYear) {
-            System.out.println(year + " год является высокосным.");
+            System.out.println(year + " год является високосным.");
         } else {
-            System.out.println(year + " год не является высокосным.");
+            System.out.println(year + " год не является високосным.");
         }
 
         System.out.println("Задача №4");
         int deliveryDistance = 95;
+        int dey = 1;
+        boolean deliveryOneDay = (deliveryDistance < 20);
+        if (deliveryOneDay) {
+            System.out.println("Потребуется дней: " + dey);
+        }
+        boolean deliveryTwoDay = (deliveryDistance > 20) && (deliveryDistance < 60);
+        if (deliveryTwoDay) {
+            System.out.println("Потребуется дней: " + (dey + 1));
+        }
+        boolean deliveryThreeDay = (deliveryDistance > 60) && (deliveryDistance < 100);
+        if (deliveryThreeDay) {
+            System.out.println("Потребуется дней: " + (dey + 2));
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставки нет.");
+        }
+
+        System.out.println("Задача №5");
+        int monthNumber = 12;
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зимнй месяц.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весенний месяц.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Летний меяц.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осенний месяц.");
+                break;
+            default:
+                System.out.println("Такого месяца нет.");
+        }
+
 
     }
 }
