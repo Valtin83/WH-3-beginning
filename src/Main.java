@@ -31,17 +31,17 @@ public class Main {
         }
 
         System.out.println("Задача №4");
-        int deliveryDistance = 95;
+        int deliveryDistance = 60;
         int dey = 1;
         boolean deliveryOneDay = (deliveryDistance < 20);
         if (deliveryOneDay) {
             System.out.println("Потребуется дней: " + dey);
         }
-        boolean deliveryTwoDay = (deliveryDistance > 20) && (deliveryDistance < 60);
+        boolean deliveryTwoDay = (deliveryDistance >= 20) && (deliveryDistance < 60);
         if (deliveryTwoDay) {
             System.out.println("Потребуется дней: " + (dey + 1));
         }
-        boolean deliveryThreeDay = (deliveryDistance > 60) && (deliveryDistance < 100);
+        boolean deliveryThreeDay = (deliveryDistance >= 60) && (deliveryDistance <= 100);
         if (deliveryThreeDay) {
             System.out.println("Потребуется дней: " + (dey + 2));
         } else if (deliveryDistance > 100) {
